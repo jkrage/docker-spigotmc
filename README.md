@@ -1,0 +1,2 @@
+# docker-spigotmc
+SpigotMC Minecraft

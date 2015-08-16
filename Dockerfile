@@ -8,7 +8,7 @@ MAINTAINER Joshua Krage <jkrage@guisarme.us>
 ###
 ### Customization
 ###
-###   SPIGOT_REV specifies the version of Spigot built (default: 1.8.7)
+###   SPIGOT_REV specifies the version of Spigot built (default: 1.8.8)
 ###   SPIGOT_BUILD_REV specifies the version of Spigot source code to pull (default: latest)
 ###   JVM_OPT_XmX sets the JVM option for maximum memory size (default: -Xmx1024M)
 ###   JVM_OPT_Xms sets the JVM option for starting memory size (default: -Xms512M)

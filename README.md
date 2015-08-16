@@ -24,3 +24,6 @@ Exposed ports:
 Exposed VOLUMES:
   * VOLUME ${MINECRAFT_JAR} (default: /minecraft/jar)
   * VOLUME ${MINECRAFT_SERVER} (default: /minecraft/server)
+
+Inside the container, user/group minecraft is created. This user is used to build
+and run the server.

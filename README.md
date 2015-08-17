@@ -20,9 +20,10 @@ Image building settings include:
 
 The following settings affect the container runtime, and can be readily overridden on
 the command-line or a docker-compose configuration.
-  * `SPIGOT_OPTS` provides options to Spigot runtime (default: `--noconsole`).
+  * `SPIGOT_OPTS` provides options to Spigot runtime (default: `nogui --noconsole`).
 
-      `--noconsole` is needed to avoid 100% CPU from a detached console.
+      `nogui` is needed to avoid 100% CPU from a detached terminal.
+      `--noconsole` disables the interactive console.
   * `JVM_OPTS` sets the JVM options, such as memory size and garbage collection.
 
     Default:

@@ -3,7 +3,7 @@ MAINTAINER Joshua Krage <jkrage@guisarme.us>
 ### Image customization:
 ###   SPIGOT_REV specifies the version of Spigot built (default: 1.8.8)
 ###   SPIGOT_BUILD_REV specifies the version of Spigot source code to pull (default: latest)
-###   SPIGOT_OPTS provides options to Spigot runtime (default: --noconsole)
+###   SPIGOT_OPTS provides options to Spigot runtime (default: nogui --noconsole)
 ###   JVM_OPTS sets the JVM options, such as memory size and garbage collection
 ###     Default:
 ###       -Xms512M -Xmx512M -XX:+UseConcMarkSweepGC -XX:+CMSIncrementalPacing -XX:+AggressiveOpts
@@ -17,7 +17,7 @@ MAINTAINER Joshua Krage <jkrage@guisarme.us>
 ###     (default: https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/    BuildTools.jar)
 ###
 ENV JVM_OPTS="-Xms512M -Xmx512M -XX:+UseConcMarkSweepGC -XX:+CMSIncrementalPacing -XX:+AggressiveOpts"
-ENV SPIGOT_OPTS="--noconsole"
+ENV SPIGOT_OPTS="nogui --noconsole"
 ENV SPIGOT_REV="1.8.8"
 ENV SPIGOT_BUILD_REV="latest"
 #

@@ -2,8 +2,8 @@ SpigotMC Minecraft
 ==================
 
  Key references:
-  * Download, build, and install SpigotMC's BuildTool and SpigotMC [1](https://www.spigotmc.org/wiki/buildtools/)
-  * Configure SpigotMC [2](https://www.spigotmc.org/wiki/spigot-installation/)
+  * Download, build, and install SpigotMC [SpigotMC Build][1]
+  * Configure SpigotMC [SpigotMC Installation][2]
 
 Build customization is performed via ENV settings:
   * `SPIGOT_REV` specifies the version of Spigot built (default: `1.8.8`)
@@ -20,7 +20,7 @@ Build customization is performed via ENV settings:
   * `MINECRAFT_JAR` directory for newly-built Spigot jar files (default: `/minecraft/jar`)
   * `MINECRAFT_SERVER` directory for Spigot configuration files (default: `/minecraft/server`)
   * `JAR_TO_RUN` sets the server .jar file to run (default: `${MINECRAFT_JAR}/spigot-${SPIGOT_REV}.jar`)
-  * `FILE_BUILDTOOL` sets download location for Spigot's BuildTools [download](https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar)
+  * `FILE_BUILDTOOL` sets download location for Spigot's BuildTools [SpigotMC's BuildTools][3]
 
 Exposed ports:
   * `25565/tcp` (Minecraft standard)
@@ -30,5 +30,9 @@ Exposed VOLUMES:
   * `VOLUME ${MINECRAFT_JAR}` (default: `/minecraft/jar`)
   * `VOLUME ${MINECRAFT_SERVER}` (default: `/minecraft/server`)
 
-Inside the container, user/group minecraft is created. This user is used to build
+Inside the container, user/group `minecraft` is created. This user is used to build
 and run the server.
+
+[1]: https://www.spigotmc.org/wiki/buildtools/              "SpigotMC Build"
+[2]: https://www.spigotmc.org/wiki/spigot-installation/     "SpigotMC Installation"
+[3]: https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar     "SpigotMC's BuildTools"

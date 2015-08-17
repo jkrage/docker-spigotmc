@@ -1,11 +1,14 @@
 SpigotMC Minecraft
 ==================
+This [Docker][1] image auto-creates a recent [SpigotMC][2] server.
 
- Key references:
-  * Download, build, and install SpigotMC [SpigotMC Build][1]
-  * Configure SpigotMC [SpigotMC Installation][2]
+Key References
+--------------
+  * Download, build, and install SpigotMC [SpigotMC Build][3]
+  * Configure SpigotMC [SpigotMC Installation][4]
 
-Build customization is performed via ENV settings:
+Build customization is performed via ENV settings
+-------------------------------------------------
   * `SPIGOT_REV` specifies the version of Spigot built (default: `1.8.8`)
   * `SPIGOT_BUILD_REV` specifies the version of Spigot source code to pull (default: `latest`)
   * `SPIGOT_OPTS` provides options to Spigot runtime (default: `--noconsole`)
@@ -20,19 +23,25 @@ Build customization is performed via ENV settings:
   * `MINECRAFT_JAR` directory for newly-built Spigot jar files (default: `/minecraft/jar`)
   * `MINECRAFT_SERVER` directory for Spigot configuration files (default: `/minecraft/server`)
   * `JAR_TO_RUN` sets the server .jar file to run (default: `${MINECRAFT_JAR}/spigot-${SPIGOT_REV}.jar`)
-  * `FILE_BUILDTOOL` sets download location for Spigot's BuildTools [SpigotMC's BuildTools][3]
+  * `FILE_BUILDTOOL` sets download location for Spigot's BuildTools [SpigotMC's BuildTools][5]
 
-Exposed ports:
+Exposed ports
+-------------
   * `25565/tcp` (Minecraft standard)
   * `25575/tcp` (Minecraft remote console port)
 
-Exposed VOLUMES:
+Exposed VOLUMES
+---------------
   * `VOLUME ${MINECRAFT_JAR}` (default: `/minecraft/jar`)
   * `VOLUME ${MINECRAFT_SERVER}` (default: `/minecraft/server`)
 
+Additional Information
+----------------------
 Inside the container, user/group `minecraft` is created. This user is used to build
 and run the server.
 
-[1]: https://www.spigotmc.org/wiki/buildtools/              "SpigotMC Build"
-[2]: https://www.spigotmc.org/wiki/spigot-installation/     "SpigotMC Installation"
-[3]: https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar     "SpigotMC's BuildTools"
+[1]: https://www.docker.io/                                 "Docker"
+[2]: https://www.spigotmc.org/                              "SpigotMC"
+[3]: https://www.spigotmc.org/wiki/buildtools/              "SpigotMC Build"
+[4]: https://www.spigotmc.org/wiki/spigot-installation/     "SpigotMC Installation"
+[5]: https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar     "SpigotMC's BuildTools"

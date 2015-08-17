@@ -11,8 +11,6 @@ Build customization is performed via ENV settings:
   * `SPIGOT_OPTS` provides options to Spigot runtime (default: `--noconsole`)
 
       `--noconsole` is needed to avoid 100% CPU from a detached console
-  * JVM_OPT_XmX sets the JVM option for maximum memory size (default: -Xmx1024M)
-  * JVM_OPT_Xms sets the JVM option for starting memory size (default: -Xms512M)
   * `JVM_OPTS` sets the JVM options, such as memory size and garbage collection
 
     Default:

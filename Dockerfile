@@ -1,13 +1,6 @@
 FROM jkrage/oraclejava
 MAINTAINER Joshua Krage <jkrage@guisarme.us>
-# Key references:
-#   (1) Download, build, and install SpigotMC's BuildTool and SpigotMC
-#       https://www.spigotmc.org/wiki/buildtools/
-#   (2) Configure SpigotMC
-#       https://www.spigotmc.org/wiki/spigot-installation/
-###
-### Customization
-###
+### Image customization:
 ###   SPIGOT_REV specifies the version of Spigot built (default: 1.8.8)
 ###   SPIGOT_BUILD_REV specifies the version of Spigot source code to pull (default: latest)
 ###   SPIGOT_OPTS provides options to Spigot runtime (default: --noconsole)

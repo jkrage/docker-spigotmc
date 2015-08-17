@@ -44,7 +44,7 @@ Additional Information
 Inside the container, user/group `minecraft` is created. This user is used to build
 and run the Spigot server.
 
-Source references:
+**References:**
   * Download, build, and install: [SpigotMC Build][5]
   * Configure the [SpigotMC Installation][6]
 

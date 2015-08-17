@@ -16,7 +16,7 @@ Image building settings include:
     retained outside of the build-time (in the running container).
   * `MINECRAFT_JAR` volume for newly-built Spigot jar files (default: `/minecraft/jar`).
   * `MINECRAFT_SERVER` volume for Spigot server configuration files (default: `/minecraft/server`).
-  * `FILE_BUILDTOOL` sets download location for Spigot's BuildTools [SpigotMC's BuildTools][4].
+  * `FILE_BUILDTOOL` sets download location for [SpigotMC's BuildTools][4].
 
 The following settings affect the container runtime, and can be readily overridden on
 the command-line or a docker-compose configuration.
@@ -32,7 +32,7 @@ the command-line or a docker-compose configuration.
 Exposed VOLUMES
 ---------------
   * `VOLUME ${MINECRAFT_SERVER}` (default: `/minecraft/server`), for the server configuration directory. Must be provided from outside the image to retain persistence. If an external volume is not provided, a new server will be created, then automatically abort since the EULA has not been accepted.
-  * `VOLUME ${MINECRAFT_JAR}` (default: `/minecraft/jar`), for the server .jar files. 
+  * `VOLUME ${MINECRAFT_JAR}` (default: `/minecraft/jar`), for the server .jar files. See also `JAR_TO_RUN` to use a custom .jar file.
 
 Exposed Ports
 -------------

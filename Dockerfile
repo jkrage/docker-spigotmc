@@ -17,7 +17,7 @@ MAINTAINER Joshua Krage <jkrage@guisarme.us>
 ###     (default: https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/    BuildTools.jar)
 ###
 ENV JVM_OPTS="-Xms512M -Xmx512M -XX:+UseConcMarkSweepGC -XX:+CMSIncrementalPacing -XX:+AggressiveOpts"
-ENV SPIGOT_OPTS="nogui --noconsole"
+ENV SPIGOT_OPTS="nogui"
 ENV SPIGOT_REV="1.10.2"
 ENV SPIGOT_BUILD_REV="latest"
 #

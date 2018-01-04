@@ -18,7 +18,7 @@ MAINTAINER Joshua Krage <jkrage@guisarme.us>
 ###
 ENV JVM_OPTS="-Xms512M -Xmx512M -XX:+UseConcMarkSweepGC -XX:+CMSIncrementalPacing -XX:+AggressiveOpts"
 ENV SPIGOT_OPTS="nogui --noconsole"
-ENV SPIGOT_REV="1.12.1"
+ENV SPIGOT_REV="1.12.2"
 ENV SPIGOT_BUILD_REV="latest"
 #
 ENV MINECRAFT_BASE /minecraft

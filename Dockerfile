@@ -1,7 +1,7 @@
-FROM jkrage/oraclejava
+FROM debian:testing
 MAINTAINER Joshua Krage <jkrage@guisarme.us>
 ### Image customization:
-###   SPIGOT_REV specifies the version of Spigot built (default: 1.9.4)
+###   SPIGOT_REV specifies the version of Spigot built (default: 1.13)
 ###   SPIGOT_BUILD_REV specifies the version of Spigot source code to pull (default: latest)
 ###   SPIGOT_OPTS provides options to Spigot runtime (default: nogui --noconsole)
 ###   JVM_OPTS sets the JVM options, such as memory size and garbage collection
@@ -18,7 +18,7 @@ MAINTAINER Joshua Krage <jkrage@guisarme.us>
 ###
 ENV JVM_OPTS="-Xms512M -Xmx512M -XX:+UseConcMarkSweepGC -XX:+CMSIncrementalPacing -XX:+AggressiveOpts"
 ENV SPIGOT_OPTS="nogui --noconsole"
-ENV SPIGOT_REV="1.12.2"
+ENV SPIGOT_REV="1.13.2"
 ENV SPIGOT_BUILD_REV="latest"
 #
 ENV MINECRAFT_BASE /minecraft
@@ -33,6 +33,8 @@ ENV FILE_BUILDTOOL https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfu
 RUN apt-get update && apt-get -y install \
         git \
         tar \
+        wget \
+        openjdk-11-jre \
     && rm -rf /var/lib/apt/lists/* \
     && groupadd -r minecraft \
     && useradd -m -g minecraft -d ${MINECRAFT_BASE} minecraft \

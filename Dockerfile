@@ -34,7 +34,7 @@ RUN apt-get update && apt-get -y install \
         git \
         tar \
         wget \
-        openjdk-11-jre \
+        openjdk-17-jre-headless \
     && rm -rf /var/lib/apt/lists/* \
     && groupadd -r minecraft \
     && useradd -m -g minecraft -d ${MINECRAFT_BASE} minecraft \

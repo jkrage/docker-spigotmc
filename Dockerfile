@@ -1,7 +1,7 @@
 FROM debian:testing
 MAINTAINER Joshua Krage <jkrage@guisarme.us>
 ### Image customization:
-###   SPIGOT_REV specifies the version of Spigot built (default: 1.13)
+###   SPIGOT_REV specifies the version of Spigot built (default: 1.16)
 ###   SPIGOT_BUILD_REV specifies the version of Spigot source code to pull (default: latest)
 ###   SPIGOT_OPTS provides options to Spigot runtime (default: nogui --noconsole)
 ###   JVM_OPTS sets the JVM options, such as memory size and garbage collection
@@ -18,8 +18,8 @@ MAINTAINER Joshua Krage <jkrage@guisarme.us>
 ###
 ENV JVM_OPTS="-Xms512M -Xmx512M"
 ENV SPIGOT_OPTS="nogui --noconsole"
-ENV SPIGOT_REV="1.14.4"
-ENV SPIGOT_BUILD_REV="1.14.4"
+ARG SPIGOT_REV="1.16"
+ARG SPIGOT_BUILD_REV="1.16"
 #
 ENV MINECRAFT_BASE /minecraft
 ENV MINECRAFT_BUILD ${MINECRAFT_BASE}/build

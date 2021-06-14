@@ -35,6 +35,7 @@ RUN apt-get update && apt-get -y install \
         tar \
         wget \
         openjdk-17-jre-headless \
+    && apt-get --reinstall install ca-certificates-java \
     && rm -rf /var/lib/apt/lists/* \
     && groupadd -r minecraft \
     && useradd -m -g minecraft -d ${MINECRAFT_BASE} minecraft \

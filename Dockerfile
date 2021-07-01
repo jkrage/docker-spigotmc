@@ -1,4 +1,4 @@
-FROM debian:testing
+FROM debian:unstable
 MAINTAINER Joshua Krage <jkrage@guisarme.us>
 ### Image customization:
 ###   SPIGOT_REV specifies the version of Spigot built (default: 1.16)
@@ -34,7 +34,7 @@ RUN apt-get update && apt-get -y install \
         git \
         tar \
         wget \
-        openjdk-17-jre-headless \
+        openjdk-16-jre-headless \
     && apt-get --reinstall install ca-certificates-java \
     && rm -rf /var/lib/apt/lists/* \
     && groupadd -r minecraft \
